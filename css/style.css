@@ -60,6 +60,10 @@ body {
     height: 35px;
 }
 
+/* .logo:hover {
+    animation: moveInRight 1s ease-out;
+} */
+
 .text-box {
     position: absolute;
     top: 40%;
@@ -71,6 +75,8 @@ body {
 .heading-primary {
     color: #fff;
     text-transform: uppercase;
+
+    backface-visibility: hidden;
 }
 
 .heading-primary-main{
@@ -78,6 +84,13 @@ body {
     font-size: 60px;
     font-weight: 400;
     letter-spacing: 35px;
+    
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+
+    /*animation-delay: 3s;
+    animation-iteration-count: 5*/
 }
 
 .heading-primary-sub {
@@ -85,4 +98,40 @@ body {
     font-size: 20px;
     font-weight: 700;
     letter-spacing: 17.4px;
+
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    80%{
+        transform: translateX(20px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    80% {
+        transform: translateX(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
 }
