@@ -1,0 +1,88 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+
+/* IT IS A REALLY GOOD PRACTICE TO PREDEFINE ELEMENT PROPERTIES IN ORDER TO WORK UPON  */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* DON'T USE FONT PROPERTIES DIRECTLY ON EVERTHING SINCE THEY ARE INHERITED DO IT ON BODY ITSELF */
+
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #777;
+    padding: 30px;   /*PADDING GETS APPLIED TO THE ENITRE BODY ONLY NOT A CASE OF INHERITANCE*/
+}
+
+
+    /* HEADER SECTION HERE  */
+.header {
+    position: relative;
+    height: 95vh;
+
+    /* IMPORTANT STEP SETTING LINEAR GRADIENT AND IMAGE ITSELF */
+
+    background-image: linear-gradient(to right bottom,
+    rgba(126, 213, 111, 0.767),
+    rgba(40, 180, 133, 0.795)),
+    url(../img/hero.jpg);
+
+
+    background-size: cover;
+    background-position: top;
+
+    /* ONE OF THE NEW CSS PROPERTIES DEFINED BY clip-path: shape ( coordinates in x & y direction).
+    https: //bennettfeely.com/clippy/ for clip-path */
+    clip-path: polygon(0 0 , 100% 0, 100% 75vh, 0 100%);
+}
+
+
+        /* LOGO SECTION HERE  */
+.logo-box {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
+.logo {
+    height: 35px;
+}
+
+.text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+
+    /* TRANSFORM IS AN PROPERTY WHERE WE TRANSORMED OUT BOX EXACLY AT THE MIDDLE OF THE PARENT ELEMENT */
+    transform: translate(-50%, -50%);
+}
+.heading-primary {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.heading-primary-main{
+    display: block;
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 35px;
+}
+
+.heading-primary-sub {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 17.4px;
+}
